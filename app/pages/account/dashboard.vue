@@ -75,9 +75,9 @@ definePageMeta({
 })
 
 
-// onMounted(async () => {
-//     const resp = await api.login('1')
-// })
+onMounted(async () => {
+    const resp = await api.login('1')
+})
 
 
 </script>

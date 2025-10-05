@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@marcoschulte/vue3-progress": "^0.0.9",
     "@pinia/nuxt": "^0.11.2",
     "@vuepic/vue-datepicker": "^11.0.2",
     "axios": "^1.12.2",

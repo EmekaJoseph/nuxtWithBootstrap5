@@ -1,8 +1,10 @@
 import axios from 'axios';
 // @ts-ignore
 // import Cookies from 'js-cookie';
+import { type ProgressFinisher, useProgress } from '@marcoschulte/vue3-progress';
 
-const loadingIndicator = useLoadingIndicator()
+const progresses = [] as ProgressFinisher[];
+
 
 // const hostURL = import.meta.env.VITE_API_URL;
 const hostURL = 'https://google';
@@ -30,17 +32,17 @@ const setAuthAndStartProgress = (config: any) => {
     const token = authStore.profileName;
     if (token) config.headers.Authorization = `Bearer ${token}`;
 
-    loadingIndicator.start({ force: true })
+    progresses.push(useProgress().start());
     return config;
 };
 
 const finishProgress = (response: any) => {
-    loadingIndicator.finish()
+    progresses.pop()?.finish();
     return response;
 };
 
 const handleError = (error: any) => {
-    loadingIndicator.finish()
+    progresses.pop()?.finish();
     return Promise.reject(error);
 };
 

@@ -2,6 +2,8 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+
+  // For static hosting
   ssr: false,
 
   css: [
@@ -9,7 +11,8 @@ export default defineNuxtConfig({
     'vue-select/dist/vue-select.css',
     '@vuepic/vue-datepicker/dist/main.css',
     'sweetalert2/dist/sweetalert2.min.css',
-    'vue3-easy-data-table/dist/style.css'
+    'vue3-easy-data-table/dist/style.css',
+    '@marcoschulte/vue3-progress/style'
     // 'main.css'
   ],
 
@@ -22,6 +25,17 @@ export default defineNuxtConfig({
   pinia: {
     // ##### make pinia look for all folders that have stores
     // storesDirs: ['./stores/**', './custom-folder/stores/**'],
+  },
+
+
+
+  // Build configuration
+  app: {
+    baseURL: './',
+    // buildAssetsDir: '_nuxt/'
+  },
+  nitro: {
+    preset: 'static',
   },
 })
 

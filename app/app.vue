@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLoadingIndicator />
+    <vue3-progress-bar />
     <NuxtPage />
   </div>
 </template>
