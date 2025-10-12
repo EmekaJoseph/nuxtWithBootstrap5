@@ -65,18 +65,29 @@
 </template>
 
 <script setup lang="ts">
+
 import api from '~/api';
 
 definePageMeta({
+    alias: ['/dashboard', '/auth/dashboard'],
     meta: {
         requiredRole: 'admin',
+        name: 'Admin Dashboard'
         // middleware: 'auth',
     }
 })
 
 
+const route = useRoute()
+
 onMounted(async () => {
-    const resp = await api.login('1')
+    try {
+        const resp = await api.login('1')
+    }
+    catch (error: any) {
+
+    }
+
 })
 
 

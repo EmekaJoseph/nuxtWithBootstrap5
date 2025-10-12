@@ -3,7 +3,11 @@
         <div class="min-vh-100 d-flex justify-content-center align-items-center">
             <div class="col-lg-4 col-md-7">
                 <div class="card shadow-sm">
+                    <div class="card-header">
+                        <img class="float-end" width="20" src="/img/stadium2.jpg" alt="Discover Nuxt"></img>
+                    </div>
                     <div class="card-body">
+
                         <form @submit.prevent="login" id="myForm" class="row g-3">
                             <div class="col-12">
                                 <div class="form-label">Email</div>

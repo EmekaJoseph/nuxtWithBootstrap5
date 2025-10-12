@@ -27,16 +27,16 @@ export default defineNuxtConfig({
     // storesDirs: ['./stores/**', './custom-folder/stores/**'],
   },
 
+  // routeRules: {
+  //   '/auth/dashboard': { redirect: '/account/dashboard' },
+  // },
 
 
   // Build configuration
   app: {
-    baseURL: './',
     // buildAssetsDir: '_nuxt/'
   },
-  nitro: {
-    preset: 'static',
-  },
+
 })
 
 // ############ Commands ####################
